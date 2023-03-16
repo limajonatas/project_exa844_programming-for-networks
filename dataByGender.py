@@ -15,6 +15,8 @@ def getData(url):
     candidatosFeminino = 0
     candidatosMasculino = 0
     totalCandidaturas = 0
+    
+    print("\n", soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text)
 
     tables = soup.findAll("table", {"class": "t-Report-report"})
     for table in tables:
