@@ -41,9 +41,10 @@ def getData(url):
 
     candidatosJson["candidatos"] = candidatos
     jsonStr = json.dumps(candidatosJson, indent=4, ensure_ascii=False)
-    print(jsonStr)
-    print("somados: ", totalVotos)
-    print("total: ", total)
+    # print(jsonStr)
+    # print("somados: ", totalVotos)
+    # print("total: ", total)
+    return candidatos
 
 
 # print(soup.prettify())

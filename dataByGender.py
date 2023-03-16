@@ -16,8 +16,7 @@ def getData(url):
     candidatosMasculino = 0
     totalCandidaturas = 0
     
-    print("\n", soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text)
-
+    
     tables = soup.findAll("table", {"class": "t-Report-report"})
     for table in tables:
         tbody = table.find("tbody")
@@ -73,9 +72,19 @@ def getData(url):
 
                     cont = cont + 1
 
-    print("Votos Femininos: ", votacaoFeminino)
-    print("Votos Masculinos: ", votacaoMasculino)
-    print("Total de Votos: ", totalVotacao)
-    print("Candidatos Femininos: ", candidatosFeminino)
-    print("Candidatos Masculinos: ", candidatosMasculino)
-    print("Total de Candidaturas: ", totalCandidaturas)
+    # print("Votos Femininos: ", votacaoFeminino)
+    # print("Votos Masculinos: ", votacaoMasculino)
+    # print("Total de Votos: ", totalVotacao)
+    # print("Candidatos Femininos: ", candidatosFeminino)
+    # print("Candidatos Masculinos: ", candidatosMasculino)
+    # print("Total de Candidaturas: ", totalCandidaturas)
+    date = dict();
+    date["ano"] = soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text
+    date["dados"] = []
+    date["dados"].append({"votosFemininos": votacaoFeminino})
+    date["dados"].append({"votosMasculinos": votacaoMasculino})
+    date["dados"].append({"totalVotos": totalVotacao})
+    date["dados"].append({"candidatosFemininos": candidatosFeminino})
+    date["dados"].append({"candidatosMasculinos": candidatosMasculino})
+    date["dados"].append({"totalCandidaturas": totalCandidaturas})
+    return date;
