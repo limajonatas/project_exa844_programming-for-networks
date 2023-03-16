@@ -59,7 +59,7 @@
             }
         ]
     },
-    "ByGender": [
+    "by_gender": [
         {
             "ano": "2022",
             "dados": [

@@ -4,7 +4,7 @@ import dataByGender
 
 print("Starting the program...")
 urlPais = "https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/maiores-votacoes?p0_turno=1&session=214694431999301"
-urlRegion = "https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/maiores-votacoes?p0_abrangencia=Regi%C3%A3o&clear=RP&session=205449690850665"
+# urlRegion = "https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/maiores-votacoes?p0_abrangencia=Regi%C3%A3o&clear=RP&session=205449690850665"
 
 print("Getting data from the country...")
 votes = dict()
@@ -13,13 +13,13 @@ votes["candidatos"] = dataCountry.getData(urlPais)
 
 dateAll = dict()
 dateAll["votes"] = votes
-dateAll["ByGender"] = []
+dateAll["by_gender"] = []
 print("Getting data from the country by gender...", end="")
-with open("seedsDateByGender.txt", "r") as arquivo:
+with open("seedsDataByGender.txt", "r") as arquivo:
     linhas = arquivo.readlines()
     for linha in linhas:
         date = dataByGender.getData(linha)
-        dateAll["ByGender"].append(date)
+        dateAll["by_gender"].append(date)
         print(".", end="")
 
 print(".")
@@ -28,4 +28,4 @@ string = json.dumps(dateAll, indent=4, ensure_ascii=False).encode("utf-8")
 file.write(string.decode())
 file.close()
 print("Done!")
-print("file dateAll.txt created!")
+print("file dataAll.txt created!")
