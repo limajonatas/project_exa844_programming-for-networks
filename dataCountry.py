@@ -2,6 +2,7 @@ import urllib.request
 import string
 import json
 from bs4 import BeautifulSoup
+
 def getData(url):
     page = urllib.request.urlopen(url)
     html = str(page.read().decode("utf-8"))

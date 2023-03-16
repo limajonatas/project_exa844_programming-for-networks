@@ -14,7 +14,7 @@ votes["candidatos"] = dataCountry.getData(urlPais)
 dateAll = dict()
 dateAll["votes"] = votes
 dateAll["ByGender"] = []
-print("Getting data from the country by gender...", end="");
+print("Getting data from the country by gender...", end="")
 with open("seedsDateByGender.txt", "r") as arquivo:
     linhas = arquivo.readlines()
     for linha in linhas:
@@ -23,11 +23,9 @@ with open("seedsDateByGender.txt", "r") as arquivo:
         print(".", end="")
 
 print(".")
-file = open("dateAll.txt", "w")
+file = open("dataAll.txt", "w")
 string = json.dumps(dateAll, indent=4, ensure_ascii=False).encode("utf-8")
-file.write(
-    string.decode()
-)
+file.write(string.decode())
 file.close()
 print("Done!")
 print("file dateAll.txt created!")
