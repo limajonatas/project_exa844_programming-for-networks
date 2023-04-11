@@ -2,4 +2,3 @@ https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/g%C3%AAnero?sess
 https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/g%C3%AAnero?p0_ano=2018&session=2129055412003
 https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/g%C3%AAnero?p0_ano=2014&session=2129055412003
 https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/g%C3%AAnero?p0_ano=2010&session=2129055412003
-https://sig.tse.jus.br/ords/dwapr/seai/r/sig-eleicao-resultados/g%C3%AAnero?p0_ano=2006&session=2129055412003
