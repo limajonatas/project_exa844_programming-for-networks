@@ -1,6 +1,5 @@
 import urllib.request
 import string
-import json
 from bs4 import BeautifulSoup
 
 

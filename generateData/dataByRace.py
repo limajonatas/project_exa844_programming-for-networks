@@ -1,6 +1,5 @@
 import urllib.request
 import string
-import json
 from bs4 import BeautifulSoup
 
 
@@ -9,11 +8,13 @@ def getData(url):
     html = str(page.read().decode("utf-8"))
 
     soup = BeautifulSoup(html, "lxml")
-    votacaoFeminino = 0
-    votacaoMasculino = 0
+    votacaoPreta = 0
+    votacaoBranca = 0
+    votacaoParda = 0
     totalVotacao = 0
-    candidatosFeminino = 0
-    candidatosMasculino = 0
+    candidatosPretos = 0
+    candidatosBrancos = 0
+    candidatosPardos = 0
     totalCandidaturas = 0
     
     
@@ -31,14 +32,20 @@ def getData(url):
                     if (
                         header[0] == "QT_VOTOS_NOMINAIS"
                     ):  # se for a coluna de votos nominais  verifica se a coluna anterior é feminino ou masculino
-                        if tds[cont - 1].text == "Feminino":
-                            votacaoFeminino = int(
+                        if tds[cont - 1].text == "Branca":
+                            votacaoBranca = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        if tds[cont - 1].text == "Masculino":
-                            votacaoMasculino = int(
+                        if tds[cont - 1].text == "Preta":
+                            votacaoPreta = int(
+                                tds[cont].text.translate(
+                                    str.maketrans("", "", string.punctuation)
+                                )
+                            )
+                        if tds[cont - 1].text == "Parda":
+                            votacaoParda = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
@@ -51,14 +58,20 @@ def getData(url):
                             )
 
                     if header[0] == "QT_CANDIDATO":
-                        if tds[cont - 1].text == "Feminino":
-                            candidatosFeminino = int(
+                        if tds[cont - 1].text == "Preta":
+                            candidatosPretos = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        if tds[cont - 1].text == "Masculino":
-                            candidatosMasculino = int(
+                        if tds[cont - 1].text == "Branca":
+                            candidatosBrancos = int(
+                                tds[cont].text.translate(
+                                    str.maketrans("", "", string.punctuation)
+                                )
+                            )
+                        if tds[cont - 1].text == "Parda":
+                            candidatosPardos = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
@@ -72,19 +85,21 @@ def getData(url):
 
                     cont = cont + 1
 
-    # print("Votos Femininos: ", votacaoFeminino)
-    # print("Votos Masculinos: ", votacaoMasculino)
+    # print("Votos Femininos: ", votacaoBranca)
+    # print("Votos Masculinos: ", votacaoPreta)
     # print("Total de Votos: ", totalVotacao)
-    # print("Candidatos Femininos: ", candidatosFeminino)
-    # print("Candidatos Masculinos: ", candidatosMasculino)
+    # print("Candidatos Femininos: ", candidatosPretos)
+    # print("Candidatos Masculinos: ", candidatosBrancos)
     # print("Total de Candidaturas: ", totalCandidaturas)
     date = dict();
     date["ano"] = soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text
     date["dados"] = []
-    date["dados"].append({"votosFemininos": votacaoFeminino})
-    date["dados"].append({"votosMasculinos": votacaoMasculino})
+    date["dados"].append({"votosBrancos": votacaoBranca})
+    date["dados"].append({"votosPretos": votacaoPreta})
+    date["dados"].append({"votosPardos": votacaoParda})
     date["dados"].append({"totalVotos": totalVotacao})
-    date["dados"].append({"candidatosFemininos": candidatosFeminino})
-    date["dados"].append({"candidatosMasculinos": candidatosMasculino})
+    date["dados"].append({"candidatosPretos": candidatosPretos})
+    date["dados"].append({"candidatosBrancos": candidatosBrancos})
+    date["dados"].append({"candidatosPardos": candidatosPardos})
     date["dados"].append({"totalCandidaturas": totalCandidaturas})
     return date;

@@ -1,9 +1,6 @@
 import json
-import dataCountry
-import dataByGender
-import dataByRace
-import dataByEducationLevel
 
+from generateData import dataByGender, dataByRace, dataByEducationLevel
 
 def readData(path):
     with open(path, "r") as file:
@@ -20,24 +17,25 @@ dateAll["by_race"] = []
 dateAll["by_education_level"] = []
 print("Getting data from the country by gender...", end="")
 
-lines = readData("seedsDataByGender.txt")
-for line in lines:
+linesDataByGender = readData("seeds/seedsDataByGender.txt")
+linesDataByRace = readData("seeds/seedsDataByRace.txt")
+linesDataEducationLevel = readData("seeds/seedsDataEducationLevel.txt")
+
+for line in linesDataByGender:
     date = dataByGender.getData(line)
     dateAll["by_gender"].append(date)
     print(".", end="")
 
 print("\nGetting data from the country by color/Race...", end="")
 
-lines = readData("seedsDataByRace.txt")
-for line in lines:
+for line in linesDataByRace:
     date = dataByRace.getData(line)
     dateAll["by_race"].append(date)
     print(".", end="")
 
 print("\nGetting data from the country by Education Level...", end="")
 
-lines = readData("seedsDataEducationLevel.txt")
-for line in lines:
+for line in linesDataEducationLevel:
     date = dataByEducationLevel.getData(line)
     dateAll["by_education_level"].append(date)
     print(".", end="")
