@@ -1,64 +1,4 @@
 {
-    "votes": {
-        "ano": "2022",
-        "candidatos": [
-            {
-                "nome": "LUIZ INÁCIO LULA DA SILVA",
-                "partido": "PT",
-                "votos": "57259504"
-            },
-            {
-                "nome": "JAIR MESSIAS BOLSONARO",
-                "partido": "PL",
-                "votos": "51072345"
-            },
-            {
-                "nome": "SIMONE NASSAR TEBET",
-                "partido": "MDB",
-                "votos": "4915423"
-            },
-            {
-                "nome": "CIRO FERREIRA GOMES",
-                "partido": "PDT",
-                "votos": "3599287"
-            },
-            {
-                "nome": "SORAYA VIEIRA THRONICKE",
-                "partido": "UNIÃO",
-                "votos": "600955"
-            },
-            {
-                "nome": "LUIZ FELIPE CHAVES D'AVILA",
-                "partido": "NOVO",
-                "votos": "559708"
-            },
-            {
-                "nome": "KELMON LUIS DA SILVA SOUZA",
-                "partido": "PTB",
-                "votos": "81129"
-            },
-            {
-                "nome": "LEONARDO PÉRICLES VIEIRA ROQUE",
-                "partido": "UP",
-                "votos": "53519"
-            },
-            {
-                "nome": "SOFIA PADUA MANZANO",
-                "partido": "PCB",
-                "votos": "45620"
-            },
-            {
-                "nome": "VERA LUCIA PEREIRA DA SILVA SALGADO",
-                "partido": "PSTU",
-                "votos": "25625"
-            },
-            {
-                "nome": "JOSE MARIA EYMAEL",
-                "partido": "DC",
-                "votos": "16604"
-            }
-        ]
-    },
     "by_gender": [
         {
             "ano": "2022",
@@ -264,6 +204,148 @@
                 },
                 {
                     "candidatosPardos": 0
+                },
+                {
+                    "totalCandidaturas": 9
+                }
+            ]
+        }
+    ],
+    "by_education_level": [
+        {
+            "ano": "2022",
+            "dados": [
+                {
+                    "votosEnsinoFundamentalCompleto": 57259504
+                },
+                {
+                    "votosEnsinoMedioCompleto": 53519
+                },
+                {
+                    "votosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "votosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalVotos": 118229719
+                },
+                {
+                    "candidatosEnsinoFundamentalCompleto": 1
+                },
+                {
+                    "candidatosEnsinoMedioCompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalCandidaturas": 13
+                }
+            ]
+        },
+        {
+            "ano": "2018",
+            "dados": [
+                {
+                    "votosEnsinoFundamentalCompleto": 0
+                },
+                {
+                    "votosEnsinoMedioCompleto": 0
+                },
+                {
+                    "votosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "votosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalVotos": 107050749
+                },
+                {
+                    "candidatosEnsinoFundamentalCompleto": 1
+                },
+                {
+                    "candidatosEnsinoMedioCompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalCandidaturas": 14
+                }
+            ]
+        },
+        {
+            "ano": "2014",
+            "dados": [
+                {
+                    "votosEnsinoFundamentalCompleto": 0
+                },
+                {
+                    "votosEnsinoMedioCompleto": 91209
+                },
+                {
+                    "votosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "votosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalVotos": 104023802
+                },
+                {
+                    "candidatosEnsinoFundamentalCompleto": 0
+                },
+                {
+                    "candidatosEnsinoMedioCompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalCandidaturas": 12
+                }
+            ]
+        },
+        {
+            "ano": "2010",
+            "dados": [
+                {
+                    "votosEnsinoFundamentalCompleto": 0
+                },
+                {
+                    "votosEnsinoMedioCompleto": 84609
+                },
+                {
+                    "votosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "votosEnsinoSuperiorCompleto": 0
+                },
+                {
+                    "totalVotos": 101590153
+                },
+                {
+                    "candidatosEnsinoFundamentalCompleto": 0
+                },
+                {
+                    "candidatosEnsinoMedioCompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorIncompleto": 0
+                },
+                {
+                    "candidatosEnsinoSuperiorCompleto": 0
                 },
                 {
                     "totalCandidaturas": 9
