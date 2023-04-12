@@ -2,7 +2,7 @@
     "by_gender": [
         {
             "ano": "2022",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosFemininos": 5587623
                 },
@@ -10,8 +10,10 @@
                     "votosMasculinos": 112642096
                 },
                 {
-                    "totalVotos": 118229719
-                },
+                    "total": 118229719
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosFemininos": 4
                 },
@@ -19,13 +21,13 @@
                     "candidatosMasculinos": 9
                 },
                 {
-                    "totalCandidaturas": 13
+                    "total": 13
                 }
             ]
         },
         {
             "ano": "2018",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosFemininos": 1125340
                 },
@@ -33,8 +35,10 @@
                     "votosMasculinos": 105925409
                 },
                 {
-                    "totalVotos": 107050749
-                },
+                    "total": 107050749
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosFemininos": 2
                 },
@@ -42,13 +46,13 @@
                     "candidatosMasculinos": 12
                 },
                 {
-                    "totalCandidaturas": 14
+                    "total": 14
                 }
             ]
         },
         {
             "ano": "2014",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosFemininos": 67056473
                 },
@@ -56,8 +60,10 @@
                     "votosMasculinos": 36967329
                 },
                 {
-                    "totalVotos": 104023802
-                },
+                    "total": 104023802
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosFemininos": 3
                 },
@@ -65,13 +71,13 @@
                     "candidatosMasculinos": 9
                 },
                 {
-                    "totalCandidaturas": 12
+                    "total": 12
                 }
             ]
         },
         {
             "ano": "2010",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosFemininos": 67287793
                 },
@@ -79,8 +85,10 @@
                     "votosMasculinos": 34302360
                 },
                 {
-                    "totalVotos": 101590153
-                },
+                    "total": 101590153
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosFemininos": 2
                 },
@@ -88,7 +96,7 @@
                     "candidatosMasculinos": 7
                 },
                 {
-                    "totalCandidaturas": 9
+                    "total": 9
                 }
             ]
         }
@@ -96,7 +104,7 @@
     "by_race": [
         {
             "ano": "2022",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosBrancos": 118069446
                 },
@@ -107,8 +115,10 @@
                     "votosPardos": 81129
                 },
                 {
-                    "totalVotos": 118229719
-                },
+                    "total": 118229719
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosPretos": 2
                 },
@@ -119,13 +129,13 @@
                     "candidatosPardos": 1
                 },
                 {
-                    "totalCandidaturas": 13
+                    "total": 13
                 }
             ]
         },
         {
             "ano": "2018",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosBrancos": 104577086
                 },
@@ -136,8 +146,10 @@
                     "votosPardos": 1348323
                 },
                 {
-                    "totalVotos": 107050749
-                },
+                    "total": 107050749
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosPretos": 2
                 },
@@ -148,13 +160,13 @@
                     "candidatosPardos": 1
                 },
                 {
-                    "totalCandidaturas": 14
+                    "total": 14
                 }
             ]
         },
         {
             "ano": "2014",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosBrancos": 81847183
                 },
@@ -165,8 +177,10 @@
                     "votosPardos": 0
                 },
                 {
-                    "totalVotos": 104023802
-                },
+                    "total": 104023802
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosPretos": 1
                 },
@@ -177,13 +191,13 @@
                     "candidatosPardos": 0
                 },
                 {
-                    "totalCandidaturas": 12
+                    "total": 12
                 }
             ]
         },
         {
             "ano": "2010",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosBrancos": 0
                 },
@@ -194,8 +208,10 @@
                     "votosPardos": 0
                 },
                 {
-                    "totalVotos": 101590153
-                },
+                    "total": 101590153
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosPretos": 0
                 },
@@ -206,7 +222,7 @@
                     "candidatosPardos": 0
                 },
                 {
-                    "totalCandidaturas": 9
+                    "total": 9
                 }
             ]
         }
@@ -214,7 +230,7 @@
     "by_education_level": [
         {
             "ano": "2022",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosEnsinoFundamentalCompleto": 57259504
                 },
@@ -228,8 +244,10 @@
                     "votosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalVotos": 118229719
-                },
+                    "total": 118229719
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosEnsinoFundamentalCompleto": 1
                 },
@@ -243,13 +261,13 @@
                     "candidatosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalCandidaturas": 13
+                    "total": 13
                 }
             ]
         },
         {
             "ano": "2018",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosEnsinoFundamentalCompleto": 0
                 },
@@ -263,8 +281,10 @@
                     "votosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalVotos": 107050749
-                },
+                    "total": 107050749
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosEnsinoFundamentalCompleto": 1
                 },
@@ -278,13 +298,13 @@
                     "candidatosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalCandidaturas": 14
+                    "total": 14
                 }
             ]
         },
         {
             "ano": "2014",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosEnsinoFundamentalCompleto": 0
                 },
@@ -298,8 +318,10 @@
                     "votosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalVotos": 104023802
-                },
+                    "total": 104023802
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosEnsinoFundamentalCompleto": 0
                 },
@@ -313,13 +335,13 @@
                     "candidatosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalCandidaturas": 12
+                    "total": 12
                 }
             ]
         },
         {
             "ano": "2010",
-            "dados": [
+            "qtd_votos": [
                 {
                     "votosEnsinoFundamentalCompleto": 0
                 },
@@ -333,8 +355,10 @@
                     "votosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalVotos": 101590153
-                },
+                    "total": 101590153
+                }
+            ],
+            "qtd_candidatos": [
                 {
                     "candidatosEnsinoFundamentalCompleto": 0
                 },
@@ -348,7 +372,7 @@
                     "candidatosEnsinoSuperiorCompleto": 0
                 },
                 {
-                    "totalCandidaturas": 9
+                    "total": 9
                 }
             ]
         }

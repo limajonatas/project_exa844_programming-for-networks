@@ -2,6 +2,7 @@ import json
 
 from generateData import dataByGender, dataByRace, dataByEducationLevel
 
+
 def readData(path):
     with open(path, "r") as file:
         lines = file.readlines()

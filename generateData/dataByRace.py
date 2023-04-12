@@ -85,21 +85,18 @@ def getData(url):
 
                     cont = cont + 1
 
-    # print("Votos Femininos: ", votacaoBranca)
-    # print("Votos Masculinos: ", votacaoPreta)
-    # print("Total de Votos: ", totalVotacao)
-    # print("Candidatos Femininos: ", candidatosPretos)
-    # print("Candidatos Masculinos: ", candidatosBrancos)
-    # print("Total de Candidaturas: ", totalCandidaturas)
     date = dict();
     date["ano"] = soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text
-    date["dados"] = []
-    date["dados"].append({"votosBrancos": votacaoBranca})
-    date["dados"].append({"votosPretos": votacaoPreta})
-    date["dados"].append({"votosPardos": votacaoParda})
-    date["dados"].append({"totalVotos": totalVotacao})
-    date["dados"].append({"candidatosPretos": candidatosPretos})
-    date["dados"].append({"candidatosBrancos": candidatosBrancos})
-    date["dados"].append({"candidatosPardos": candidatosPardos})
-    date["dados"].append({"totalCandidaturas": totalCandidaturas})
+    date["qtd_votos"] = []
+    date["qtd_candidatos"] = []
+
+    date["qtd_votos"].append({"votosBrancos": votacaoBranca})
+    date["qtd_votos"].append({"votosPretos": votacaoPreta})
+    date["qtd_votos"].append({"votosPardos": votacaoParda})
+    date["qtd_votos"].append({"total": totalVotacao})
+
+    date["qtd_candidatos"].append({"candidatosPretos": candidatosPretos})
+    date["qtd_candidatos"].append({"candidatosBrancos": candidatosBrancos})
+    date["qtd_candidatos"].append({"candidatosPardos": candidatosPardos})
+    date["qtd_candidatos"].append({"total": totalCandidaturas})
     return date;

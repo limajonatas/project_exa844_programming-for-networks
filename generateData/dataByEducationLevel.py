@@ -101,27 +101,32 @@ def getData(url):
     date["ano"] = (
         soup.find("div", {"id": "ano"}).find("span", {"class": "t-valor"}).text
     )
-    date["dados"] = []
-    date["dados"].append(
+    date["qtd_votos"] = []
+    date["qtd_candidatos"] = []
+
+    date["qtd_votos"].append(
         {"votosEnsinoFundamentalCompleto": votosEnsinoFundamentalCompleto}
     )
-    date["dados"].append({"votosEnsinoMedioCompleto": votosEnsinoMedioCompleto})
-    date["dados"].append(
+    date["qtd_votos"].append({"votosEnsinoMedioCompleto": votosEnsinoMedioCompleto})
+    date["qtd_votos"].append(
         {"votosEnsinoSuperiorIncompleto": votosEnsinoSuperiorIncompleto}
     )
-    date["dados"].append({"votosEnsinoSuperiorCompleto": votosEnsinoSuperiorCompleto})
-    date["dados"].append({"totalVotos": totalVotos})
-    date["dados"].append(
+    date["qtd_votos"].append(
+        {"votosEnsinoSuperiorCompleto": votosEnsinoSuperiorCompleto}
+    )
+    date["qtd_votos"].append({"total": totalVotos})
+
+    date["qtd_candidatos"].append(
         {"candidatosEnsinoFundamentalCompleto": candidatosEnsinoFundamentalCompleto}
     )
-    date["dados"].append(
+    date["qtd_candidatos"].append(
         {"candidatosEnsinoMedioCompleto": candidatosEnsinoMedioCompleto}
     )
-    date["dados"].append(
+    date["qtd_candidatos"].append(
         {"candidatosEnsinoSuperiorIncompleto": candidatosEnsinoSuperiorIncompleto}
     )
-    date["dados"].append(
+    date["qtd_candidatos"].append(
         {"candidatosEnsinoSuperiorCompleto": candidatosEnsinoSuperiorCompleto}
     )
-    date["dados"].append({"totalCandidaturas": totalCandidaturas})
+    date["qtd_candidatos"].append({"total": totalCandidaturas})
     return date
