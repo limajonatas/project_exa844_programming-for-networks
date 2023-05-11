@@ -9,9 +9,8 @@
       :text="card.title"
       :image="card.image"
       class="cursor-pointer"
-      @click="navigateTo(card.name)"
-    >
-    </card-template>
+      @click="$router.push({ name: `${card.name}` })"
+    />
   </q-page>
 </template>
 
@@ -81,7 +80,7 @@ export default defineComponent({
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
-    padding: 4rem 11rem 4rem 11rem;
+    padding: 4rem 10rem 3rem 10rem;
     gap: 2.5rem;
 
     &__card-main {

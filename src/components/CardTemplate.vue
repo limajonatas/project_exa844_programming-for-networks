@@ -1,17 +1,18 @@
 <template>
-  <q-card style="border: solid grey 1px" class="card">
+  <q-card class="card">
     <div
       class="text-bold q-pl-md text-white text"
       :class="[
-        { 'card-large': size == 'large' },
-        { 'card-small': size == 'small' },
-        { 'card-medium': size == 'medium' },
+        { 'text-large': size == 'large' },
+        { 'text-small': size == 'small' },
+        { 'text-medium': size == 'medium' },
       ]"
     >
       {{ text }}
     </div>
     <q-img
       :src="image"
+      class="image"
       :class="[
         { 'image-large': size == 'large' },
         { 'image-small': size == 'small' },
@@ -52,6 +53,7 @@ export default defineComponent({
 .q-card:hover {
   transform: scale(1.08); /* Aumenta 5% o tamanho do card */
   transition: transform 0.3s ease; /* Adiciona um efeito de transição suave */
+  border: 2px solid rgba(10, 6, 6, 0.626); /* Adiciona uma borda de 1px */
 }
 .q-card {
   position: relative;
@@ -64,21 +66,20 @@ export default defineComponent({
   left: 0;
   z-index: 1;
 }
-.card-small {
+.text-small {
   padding-top: 8px;
   font-size: 20pt;
 }
-.card-medium {
+.text-medium {
   padding-top: 8px;
   font-size: 35pt;
 }
 
-.card-large {
+.text-large {
   font-size: 50pt;
 }
 .image-small {
   height: 138px;
-  filter: blur(1.5px);
   filter: blur(1.5px) hue-rotate(90deg);
 }
 .image-medium {
