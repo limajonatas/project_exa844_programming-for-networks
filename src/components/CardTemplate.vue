@@ -7,7 +7,6 @@
         { 'card-small': size == 'small' },
         { 'card-medium': size == 'medium' },
       ]"
-      style="position: absolute; top: 0; left: 0; z-index: 1"
     >
       {{ text }}
     </div>
@@ -60,6 +59,10 @@ export default defineComponent({
 .text {
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .card-small {
   padding-top: 8px;

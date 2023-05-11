@@ -8,7 +8,8 @@
       :class="card.class"
       :text="card.title"
       :image="card.image"
-      @click="$route.push({ name: `${card.name}` })"
+      class="cursor-pointer"
+      @click="navigateTo(card.name)"
     >
     </card-template>
   </q-page>
@@ -17,9 +18,11 @@
 <script>
 import { defineComponent, defineAsyncComponent } from "vue";
 import { useQuasar } from "quasar";
+import { useRoute } from "vue-router";
 export default defineComponent({
   name: "IndexPage",
   setup() {
+    const route = useRoute();
     const mobile = useQuasar();
     const cards = [
       {
@@ -51,10 +54,12 @@ export default defineComponent({
         image: "src/assets/images/other.jpg",
       },
     ];
+
+    function navigateTo(name) {
+      route.push({ name: name });
+    }
     return {
-      test: () => {
-        console.log("teste");
-      },
+      navigateTo,
       cards,
     };
   },
@@ -71,11 +76,12 @@ export default defineComponent({
   flex-direction: column;
   row-gap: 2rem;
   padding: 1rem;
+
   @media (min-width: $breakpoint-sm) {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
-    padding: 3rem 10rem 3rem 10rem;
+    padding: 4rem 11rem 4rem 11rem;
     gap: 2.5rem;
 
     &__card-main {
