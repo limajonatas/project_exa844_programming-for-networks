@@ -22,18 +22,18 @@ export default defineComponent({
   name: "IndexPage",
   setup() {
     const route = useRoute();
-    const mobile = useQuasar();
+    const quasar = useQuasar();
     const cards = [
       {
         name: "all-data",
-        size: mobile.platform.is.mobile ? "medium" : "large",
+        size: quasar.platform.is.mobile ? "medium" : "large",
         class: "home__card-main",
         title: "Todos os Dados",
         image: "src/assets/images/all-data.jpg",
       },
       {
         name: "per-gender",
-        size: mobile.platform.is.mobile ? "small" : "medium",
+        size: quasar.platform.is.mobile ? "small" : "medium",
         class: "home__card-perGender",
         title: "Por Gênero",
         image: "src/assets/images/other.jpg",
@@ -73,7 +73,7 @@ export default defineComponent({
 .home {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 1rem;
   padding: 1rem;
 
   @media (min-width: $breakpoint-sm) {

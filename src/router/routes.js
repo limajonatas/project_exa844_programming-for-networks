@@ -1,14 +1,15 @@
 const routes = [
   {
     path: "/",
+    redirect: "/pagina-inicial",
     component: () => import("layouts/MainLayout.vue"),
     children: [
       {
-        path: "",
+        path: "pagina-inicial",
         name: "home",
         component: () => import("pages/IndexPage.vue"),
         meta: {
-          title: "Home",
+          title: "Página Inicial",
           subPage: true,
         },
       },

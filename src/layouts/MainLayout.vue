@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="row">
-        <q-btn-group push>
+        <q-btn-group push v-if="$q.platform.is.desktop">
           <q-btn
             v-for="link in linksList"
             :key="link.name"
@@ -18,7 +18,31 @@
           </q-btn>
         </q-btn-group>
 
-        <q-toolbar-title class="text-right text-bold text-white text-h6">
+        <q-btn color="white" icon="menu" flat>
+          <q-menu>
+            <q-list>
+              <q-item
+                v-for="link in linksList"
+                :key="link.name"
+                clickable
+                v-close-popup
+                @click="$router.push({ name: link.name })"
+                :class="{ 'bg-cyan': $route.name == link.name }"
+              >
+                <q-item-section>
+                  <q-item-label>
+                    {{link.title}}
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
+
+        <q-toolbar-title
+          class="text-right text-bold text-white"
+          :class="$q.platform.is.desktop ? 'text-h6' : 'text-subtitle1'"
+        >
           Estatísticas Eleições Brasileira
         </q-toolbar-title>
       </q-toolbar>
@@ -42,7 +66,7 @@ export default defineComponent({
     const linksList = computed(() => {
       let data = [
         {
-          title: "Home",
+          title: "Página Inicial",
           name: "home",
           icon: "home",
         },
