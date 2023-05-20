@@ -5,10 +5,11 @@ const routes = [
     children: [
       {
         path: "",
+        name: "home",
         component: () => import("pages/IndexPage.vue"),
         meta: {
           title: "Home",
-          subPage: false,
+          subPage: true,
         },
       },
       {
@@ -20,6 +21,33 @@ const routes = [
           subPage: true,
         },
       },
+      {
+        path: "/por-genero",
+        name: "per-gender",
+        component: () => import("src/pages/statistics/PerGender.vue"),
+        meta: {
+          title: "Por Gênero",
+          subPage: true,
+        },
+      },
+      {
+        path: "/por-raca-cor",
+        name: "per-race",
+        component: () => import("src/pages/statistics/PerRace.vue"),
+        meta: {
+          title: "Por Raça/Cor",
+          subPage: true,
+        },
+      },
+      {
+        path: "/por-grau-de-instrucao",
+        name: "per-education",
+        component: () => import("src/pages/statistics/PerEducation.vue"),
+        meta: {
+          title: "Por Grau de Instrução",
+          subPage: true,
+        },
+      }
     ],
   },
 
