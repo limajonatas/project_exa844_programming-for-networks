@@ -5,10 +5,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
+import StatisticsService from "../../services/StatisticsService";
 export default defineComponent({
   name: "PerGender",
   setup() {
+    function getByGender() {
+      StatisticsService.getByGender().then((response) => {
+        console.log(response);
+      });
+    }
+    onMounted(() => {
+      getByGender();
+    });
     return {};
   },
   components: {},
