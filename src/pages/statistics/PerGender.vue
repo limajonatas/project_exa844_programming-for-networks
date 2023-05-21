@@ -1,26 +1,108 @@
 <template>
   <q-page padding class="column justify-center">
-    <div class="text-center text-h2">Ops! Nada aqui...</div>
+    <q-card class="q-pa-md">
+      <q-card-section>
+        <q-toolbar>
+          <q-toolbar-title>
+            <h1 class="text-h6">Quantidade De Candidatos Por Genêro</h1>
+          </q-toolbar-title>
+        </q-toolbar>
+        <div class="row justify-center">
+          <div class="col-12">
+            <bar-chart
+              :series="candidatesSeries"
+              :categories="candidatesCategories"
+              :horizontal="false"
+              :legend="true"
+              :labelsYaxis="true"
+              :distributed="false"
+            />
+          </div>
+        </div>
+      </q-card-section>
+    </q-card>
+
+    <q-card class="q-pa-md">
+      <q-card-section>
+        <q-toolbar>
+          <q-toolbar-title>
+            <h1 class="text-h6">Quantidade Votos Por Genêro</h1>
+          </q-toolbar-title>
+        </q-toolbar>
+        <div class="row justify-center">
+          <div class="col-12">
+            <bar-chart
+              :series="votesSeries"
+              :categories="votesCategories"
+              :horizontal="false"
+              :legend="true"
+              :labelsYaxis="true"
+              :distributed="false"
+            />
+          </div>
+        </div>
+      </q-card-section>
+    </q-card>
   </q-page>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import StatisticsService from "../../services/StatisticsService";
+import BarChart from "../../components/charts/BarChart.vue";
 export default defineComponent({
   name: "PerGender",
   setup() {
+    const candidatesSeries = ref([]);
+    const candidatesCategories = ref([]);
+
+    const votesSeries = ref([]);
+    const votesCategories = ref([]);
+
     function getByGender() {
       StatisticsService.getByGender().then((response) => {
         console.log(response);
+        candidatesCategories.value = response.map((item) => item.ano);
+        candidatesSeries.value = [
+          {
+            name: "Feminino",
+            data: response.map(
+              (item) => item.qtd_candidatos[0].candidatosFemininos
+            ),
+          },
+          {
+            name: "Masculino",
+            data: response.map(
+              (item) => item.qtd_candidatos[1].candidatosMasculinos
+            ),
+          },
+        ];
+        votesCategories.value = response.map((item) => item.ano);
+        votesSeries.value = [
+          {
+            name: "Feminino",
+            data: response.map((item) => item.qtd_votos[0].votosFemininos),
+          },
+          {
+            name: "Masculino",
+            data: response.map((item) => item.qtd_votos[1].votosMasculinos),
+          },
+        ];
       });
     }
     onMounted(() => {
       getByGender();
     });
-    return {};
+    return {
+      votesSeries,
+      votesCategories,
+      candidatesSeries,
+      candidatesCategories,
+    };
   },
-  components: {},
+  components: {
+    BarChart,
+  },
 });
 </script>
 
