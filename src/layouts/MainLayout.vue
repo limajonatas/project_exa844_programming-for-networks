@@ -18,7 +18,7 @@
           </q-btn>
         </q-btn-group>
 
-        <q-btn color="white" icon="menu" flat>
+        <q-btn v-else color="white" icon="menu" flat>
           <q-menu>
             <q-list>
               <q-item
@@ -31,7 +31,7 @@
               >
                 <q-item-section>
                   <q-item-label>
-                    {{link.title}}
+                    {{ link.title }}
                   </q-item-label>
                 </q-item-section>
               </q-item>
@@ -62,7 +62,6 @@ export default defineComponent({
 
   setup() {
     const showTitle = ref(false);
-    const route = useRoute();
     const linksList = computed(() => {
       let data = [
         {
@@ -77,8 +76,13 @@ export default defineComponent({
         },
         {
           title: "Por Gênero",
+          name: "per-gender",
+          icon: "male",
+        },
+        {
+          title: "Por Cor/Raça",
           name: "per-race",
-          icon: "people",
+          icon: "groups",
         },
         {
           title: "Por Grau de Instrução",
