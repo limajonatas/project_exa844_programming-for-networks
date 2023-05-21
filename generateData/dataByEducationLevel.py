@@ -44,13 +44,13 @@ def getData(url):
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        elif tds[cont - 1].text == "Ensino Superior incompleto":
+                        elif tds[cont - 1].text == "Superior incompleto":
                             votosEnsinoSuperiorIncompleto = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        elif tds[cont - 1].text == "Ensino Superior completo":
+                        elif tds[cont - 1].text == "Superior completo":
                             votosEnsinoSuperiorCompleto = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
@@ -70,19 +70,19 @@ def getData(url):
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        elif tds[cont - 1].text == "Ensino Médio Completo":
+                        elif tds[cont - 1].text == "Ensino Médio completo":
                             candidatosEnsinoMedioCompleto = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        elif tds[cont - 1].text == "Ensino Superior incompleto":
+                        elif tds[cont - 1].text == "Superior incompleto":
                             candidatosEnsinoSuperiorIncompleto = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
                                 )
                             )
-                        elif tds[cont - 1].text == "Ensino Superior completo":
+                        elif tds[cont - 1].text == "Superior completo":
                             candidatosEnsinoSuperiorCompleto = int(
                                 tds[cont].text.translate(
                                     str.maketrans("", "", string.punctuation)
