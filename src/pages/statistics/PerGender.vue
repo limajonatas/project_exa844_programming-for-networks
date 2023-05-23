@@ -1,6 +1,6 @@
 <template>
-  <q-page padding class="column justify-center">
-    <q-card class="q-pa-md">
+  <q-page padding class="per-gender-page">
+    <q-card class="q-pa-md per-gender-page__candidates">
       <q-card-section>
         <q-toolbar>
           <q-toolbar-title>
@@ -23,7 +23,7 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="q-pa-md">
+    <q-card class="q-pa-md per-gender-page__votes">
       <q-card-section>
         <q-toolbar>
           <q-toolbar-title>
@@ -109,4 +109,17 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.per-gender-page {
+  display: grid;
+
+  gap: 1rem;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(5, auto);
+    &__votes {
+      grid-column: 2/6;
+    }
+  }
+}
+</style>
