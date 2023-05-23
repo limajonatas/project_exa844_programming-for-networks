@@ -14,15 +14,6 @@ const routes = [
         },
       },
       {
-        path: "/dados-gerais",
-        name: "all-data",
-        component: () => import("src/pages/statistics/AllStatistics.vue"),
-        meta: {
-          title: "Dados Gerais",
-          subPage: true,
-        },
-      },
-      {
         path: "/por-genero",
         name: "per-gender",
         component: () => import("src/pages/statistics/PerGender.vue"),
@@ -48,7 +39,7 @@ const routes = [
           title: "Por Grau de Instrução",
           subPage: true,
         },
-      }
+      },
     ],
   },
 
