@@ -25,32 +25,25 @@ export default defineComponent({
     const quasar = useQuasar();
     const cards = [
       {
-        name: "all-data",
-        size: quasar.platform.is.mobile ? "medium" : "large",
-        class: "home__card-main",
-        title: "Todos os Dados",
-        image: "src/assets/images/all-data.jpg",
-      },
-      {
         name: "per-gender",
-        size: quasar.platform.is.mobile ? "small" : "medium",
+        size: "small",
         class: "home__card-perGender",
         title: "Por Gênero",
-        image: "src/assets/images/other.jpg",
+        image: "src/assets/images/genero.jpg",
       },
       {
         name: "per-education",
         size: "small",
         class: "home__card",
         title: "Por Grau de Instrução",
-        image: "src/assets/images/other.jpg",
+        image: "src/assets/images/educacao.jpg",
       },
       {
         name: "per-race",
         size: "small",
         class: "home__card",
         title: "Por Cor/Raça",
-        image: "src/assets/images/other.jpg",
+        image: "src/assets/images/raca.jpg",
       },
     ];
 

@@ -70,11 +70,6 @@ export default defineComponent({
           icon: "home",
         },
         {
-          title: "Dados Gerais",
-          name: "all-data",
-          icon: "assessment",
-        },
-        {
           title: "Por Gênero",
           name: "per-gender",
           icon: "male",
