@@ -63,6 +63,10 @@ export default defineComponent({
       dafault: true,
       required: true,
     },
+    logarithmic: {
+      type: Boolean,
+      dafault: false,
+    },
   },
   setup(props) {
     const key = ref(0);
@@ -84,6 +88,8 @@ export default defineComponent({
       if (aux.legend?.show) aux.legend.show = props.legend;
       if (aux.xaxis?.categories) aux.xaxis.categories = props.categories;
       aux.yaxis = {
+        logarithmic: props.logarithmic,
+        logBase: 2,
         labels: {
           show: props.labelsYaxis,
           style: {
@@ -150,6 +156,8 @@ export default defineComponent({
         },
       },
       yaxis: {
+        logarithmic: false,
+        logBase: 2,
         labels: {
           show: props.labelsYaxis,
           style: {

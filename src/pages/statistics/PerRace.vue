@@ -16,6 +16,7 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
+              height="500px"
             />
           </div>
         </div>
@@ -38,6 +39,8 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
+              :logarithmic="true"
+              height="500px"
             />
           </div>
         </div>
@@ -86,11 +89,11 @@ export default defineComponent({
         votesCategories.value = response.map((item) => item.ano);
         votesSeries.value = [
           {
-            name: "Negros",
+            name: "Brancos",
             data: response.map((item) => item.qtd_votos[0].votosBrancos),
           },
           {
-            name: "Brancos",
+            name: "Negros",
             data: response.map((item) => item.qtd_votos[1].votosPretos),
           },
           {

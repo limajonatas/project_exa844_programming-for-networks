@@ -18,6 +18,7 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
+              height="500px"
             />
           </div>
         </div>
@@ -40,6 +41,8 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
+              :logarithmic="true"
+              height="500px"
             />
           </div>
         </div>
