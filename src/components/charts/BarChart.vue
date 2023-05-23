@@ -173,7 +173,9 @@ export default defineComponent({
               ? w.globals.colors[seriesIndex]
               : w.globals.colors[dataPointIndex]
           };" class="font-black text-white text-weight-bolder">
-            <span> ${w.globals.labels[dataPointIndex]} : ${
+            <span>Ano: ${
+              w.globals.labels[dataPointIndex]
+            } </span></br><span>Quantidade: ${
             series[seriesIndex][dataPointIndex]
           }
             </span>

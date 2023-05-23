@@ -7,7 +7,7 @@
             $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
           "
         >
-          Quantidade De Candidatos Por Genêro
+          CANDIDATOS POR GENÊRO
         </h1>
 
         <div class="row justify-center">
@@ -33,7 +33,7 @@
             $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
           "
         >
-          Quantidade Votos Por Genêro
+          VOTOS POR GENÊRO
         </h1>
 
         <div class="row justify-center">

@@ -7,7 +7,7 @@
             $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
           "
         >
-          Quantidade De Candidatos Por Grau De Instrução
+          CANDIDATOS POR GRAU DE INSTRUÇÃO
         </h1>
 
         <div class="row justify-center">
@@ -33,7 +33,7 @@
             $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
           "
         >
-          Quantidade Votos Por Grau De Instrução
+        VOTOS POR GRAU DE INSTRUÇÃO
         </h1>
 
         <div class="row justify-center">

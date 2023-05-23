@@ -43,6 +43,12 @@
           class="text-right text-bold text-white"
           :class="$q.platform.is.desktop ? 'text-h6' : 'text-subtitle1'"
         >
+          <q-img
+            v-if="$q.platform.is.desktop"
+            src="icons/favicon-96x96.png"
+            class="q-pa-sm"
+            style="height: 40px; width: 40px"
+          />
           Estatísticas Eleições Brasileira
         </q-toolbar-title>
       </q-toolbar>
