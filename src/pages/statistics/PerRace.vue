@@ -1,12 +1,15 @@
 <template>
-  <q-page padding class="per-race-page">
+  <q-page padding class="per-race-page q-gutter-y-md">
     <q-card class="q-pa-md per-race-page__candidates">
       <q-card-section>
-        <q-toolbar>
-          <q-toolbar-title>
-            <h1 class="text-h6">Quantidade De Candidatos Por Raça</h1>
-          </q-toolbar-title>
-        </q-toolbar>
+        <h1
+          :class="
+            $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
+          "
+        >
+          Quantidade De Candidatos Por Raça
+        </h1>
+
         <div class="row justify-center">
           <div class="col-12">
             <bar-chart
@@ -16,7 +19,7 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
-              height="500px"
+              :height="$q.platform.is.desktop ? '500px' : '300px'"
             />
           </div>
         </div>
@@ -25,11 +28,14 @@
 
     <q-card class="q-pa-md per-race-page__votes">
       <q-card-section>
-        <q-toolbar>
-          <q-toolbar-title>
-            <h1 class="text-h6">Quantidade Votos Por Raça</h1>
-          </q-toolbar-title>
-        </q-toolbar>
+        <h1
+          :class="
+            $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
+          "
+        >
+          Quantidade Votos Por Raça
+        </h1>
+
         <div class="row justify-center">
           <div class="col-12">
             <bar-chart
@@ -40,7 +46,7 @@
               :labelsYaxis="true"
               :distributed="false"
               :logarithmic="true"
-              height="500px"
+              :height="$q.platform.is.desktop ? '500px' : '450px'"
             />
           </div>
         </div>
@@ -86,7 +92,14 @@ export default defineComponent({
             ),
           },
         ];
+        candidatesCategories.value.pop();
+        candidatesSeries.value.forEach((v) => {
+          v.data.pop();
+        });
+
         votesCategories.value = response.map((item) => item.ano);
+        //apaga o ultimo elemento
+        votesCategories.value.pop();
         votesSeries.value = [
           {
             name: "Brancos",
@@ -101,6 +114,9 @@ export default defineComponent({
             data: response.map((item) => item.qtd_votos[2].votosPardos),
           },
         ];
+        votesSeries.value.forEach((v) => {
+          v.data.pop();
+        });
         console.log(votesSeries.value);
       });
     }
@@ -122,14 +138,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .per-race-page {
-  display: grid;
-
-  gap: 1rem;
-
   @media (min-width: $breakpoint-sm) {
-    grid-template-columns: repeat(5, auto);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, auto);
     &__votes {
-      grid-column: 2/6;
+      grid-column: 2/4;
     }
   }
 }

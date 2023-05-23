@@ -2,11 +2,14 @@
   <q-page padding class="per-gender-page">
     <q-card class="q-pa-md per-gender-page__candidates">
       <q-card-section>
-        <q-toolbar>
-          <q-toolbar-title>
-            <h1 class="text-h6">Quantidade De Candidatos Por Genêro</h1>
-          </q-toolbar-title>
-        </q-toolbar>
+        <h1
+          :class="
+            $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
+          "
+        >
+          Quantidade De Candidatos Por Genêro
+        </h1>
+
         <div class="row justify-center">
           <div class="col-12">
             <bar-chart
@@ -16,7 +19,7 @@
               :legend="true"
               :labelsYaxis="true"
               :distributed="false"
-              height="500px"
+              :height="$q.platform.is.desktop ? '500px' : '300px'"
             />
           </div>
         </div>
@@ -25,11 +28,14 @@
 
     <q-card class="q-pa-md per-gender-page__votes">
       <q-card-section>
-        <q-toolbar>
-          <q-toolbar-title>
-            <h1 class="text-h6">Quantidade Votos Por Genêro</h1>
-          </q-toolbar-title>
-        </q-toolbar>
+        <h1
+          :class="
+            $q.platform.is.desktop ? 'text-h6' : 'text-subtitle1 text-center'
+          "
+        >
+          Quantidade Votos Por Genêro
+        </h1>
+
         <div class="row justify-center">
           <div class="col-12">
             <bar-chart
@@ -40,7 +46,7 @@
               :labelsYaxis="true"
               :distributed="false"
               :logarithmic="true"
-              height="500px"
+              :height="$q.platform.is.desktop ? '500px' : '450px'"
             />
           </div>
         </div>
@@ -111,11 +117,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .per-gender-page {
-  display: grid;
-
-  gap: 1rem;
-
   @media (min-width: $breakpoint-sm) {
+    display: grid;
+    gap: 1.5rem;
     grid-template-columns: repeat(5, auto);
     &__votes {
       grid-column: 2/6;
