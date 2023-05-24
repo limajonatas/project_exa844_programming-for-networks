@@ -18,7 +18,7 @@
           </q-btn>
         </q-btn-group>
 
-        <q-btn v-else color="white" icon="menu" flat>
+        <q-btn v-else color="white" icon="menu" flat class="q-pl-none q-pr-xs">
           <q-menu>
             <q-list>
               <q-item
@@ -39,15 +39,16 @@
           </q-menu>
         </q-btn>
 
+        <q-toggle v-model="dark" color="secondary" :icon="dark ? 'nightlight':'light_mode'" :size="$q.platform.is.desktop ? 'lg':'md'"/>
+
         <q-toolbar-title
           class="text-right text-bold text-white"
           :class="$q.platform.is.desktop ? 'text-h6' : 'text-subtitle1'"
         >
           <q-img
-            v-if="$q.platform.is.desktop"
             src="icons/favicon-96x96.png"
             class="q-pa-sm"
-            style="height: 40px; width: 40px"
+            :style="$q.platform.is.desktop ? 'height: 40px; width: 40px':'height: 20px; width: 20px'"
           />
           Estatísticas Eleições Brasileira
         </q-toolbar-title>
@@ -60,7 +61,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed } from "vue";
+import { Dark } from "quasar";
+import { defineComponent, ref, computed, watch } from "vue";
 import { useRoute } from "vue-router";
 
 export default defineComponent({
@@ -94,10 +96,17 @@ export default defineComponent({
 
       return data;
     });
-
+    const dark = ref(false);
+    watch(
+      () => dark.value,
+      () => {
+        Dark.toggle();
+      }
+    );
     return {
       showTitle,
       linksList,
+      dark
     };
   },
 });
